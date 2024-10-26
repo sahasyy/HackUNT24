@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureCheck - Kahoot Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kahoot.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="noface.png" alt="SecureCheck Logo" class="logo">
+            <button id="spookify-btn" class="spookify-btn">Spookify</button>
+        </header>
+        <main>
+            <div class="intro-text">
+                <h1>Welcome! Let's get started with an engaging training game.</h1>
+                <p>Identify if the messages shown are real or fraudulent.</p>
+            </div>
+            <div class="game-container">
+                <div id = "explanation"></div>
+                <div class="game-image">
+                    <img alt="Message Image" id="message-image">
+                </div>
+                <div class="game-buttons">
+                    <button id="trick-btn" class="btn">TRICK</button>
+                    <button id="treat-btn" class="btn">TREAT</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="kahoot.js"></script>
+</body>
+</html>
