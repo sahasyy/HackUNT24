@@ -70,7 +70,7 @@ header {
 }
 
 /* Game Container */
-.game-container {
+.email-container {
     text-align: center;
     margin-top: 30px;
 }
@@ -148,4 +148,11 @@ li{
 
 #next-btn:hover {
     background-color: black;
+}
+
+#email-header{
+    width:90%;
+}
+#email-body{
+    width:90%;
 }

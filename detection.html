@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureCheck - Kahoot Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="detection.css">
+</head>
+<body>
+    <div class="container">
+        <!--nav bar-->
+        <header>
+            <img src="noface.png" alt="SecureCheck Logo" class="logo">
+            <button id="spookify-btn" class="spookify-btn">Spookify</button>
+        </header>
+        <main>
+            <div class="intro-text">
+                <h1>Welcome to "AI or Not?"</h1>
+                <p>Enter the email you're suspicious of!</p>
+            </div>
+            <div class="border border-gray-300 rounded-lg p-4 mb-4 email-container">
+                <form>
+                    <label for="email-header" class="block text-lg font-medium mb-2"></label>
+                    <textarea 
+                        id="email-header" 
+                        name="email-header" 
+                        rows="3" 
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                        placeholder="Paste the email header here!"
+                    ></textarea>
+                    <label for="email-body" class="block text-lg font-medium mb-2"></label>
+                    <br>
+                    <textarea 
+                      id="email-body" 
+                      name="email-body" 
+                      rows="15" 
+                      class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                      placeholder="Paste the email body content here!"
+                    ></textarea>
+                    <br>
+                    <button 
+                        type="submit" 
+                        id = "submit-btn"
+                        class="btn w-full py-3 text-xl font-semibold"
+                    >
+                    Analyze Email
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="detection.js"></script>
+</body>
+</html>
