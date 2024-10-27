@@ -13,7 +13,7 @@
     <div class="container">
         <header>
             <img src="noface.png" alt="SecureCheck Logo" class="logo">
-            <button id="spookify-btn" class="spookify-btn">Spookify</button>
+            <a href="spookykahoot.html" class="button spookify-btn" class="spookify-btn">Spookify</a>
         </header>
         <main>
             <div class="intro-text">
@@ -22,12 +22,14 @@
             </div>
             <div class="game-container">
                 <div class="game-image">
-                    <img src="scam-example.png" alt="Message Image" id="message-image">
+                    <img alt="Message Image" id="message-image">
                 </div>
                 <div class="game-buttons">
                     <button id="trick-btn" class="btn">Scam</button>
                     <button id="treat-btn" class="btn">Not a Scam</button>
                 </div>
+                <button onclick="nextQuestion()" class="btn hide" id = "next-btn">Next Question</button>
+                <div id = "explanation"></div>
             </div>
         </main>
     </div>

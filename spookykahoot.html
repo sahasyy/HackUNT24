@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="spookykahoot.css">
 </head>
-<body>
+<body ">
     <div class="container">
         <header>
             <img src="noface.png" alt="SecureCheck Logo" class="logo">
-            <button id="spookify-btn" class="spookify-btn">Spookify</button>
+            <a href = "kahoot.html" id="spookify-btn" class="spookify-btn button">Unspookify</a>
         </header>
         <main>
-            <div class="intro-text">
+            <div class="intro-text .spooky-mode">
                 <h1>Welcome! Let's get started with an engaging training game.</h1>
                 <p>Identify if the messages shown are real or fraudulent.</p>
             </div>
@@ -25,11 +25,11 @@
                     <img alt="Message Image" id="message-image">
                 </div>
                 <div class="game-buttons">
-                    <button id="trick-btn" class="btn">TRICK</button>
-                    <button id="treat-btn" class="btn">TREAT</button>
+                    <button id="trick-btn" class="btn spooky-mode">TRICK</button>
+                    <button id="treat-btn" class="btn spooky-mode">TREAT</button>
                 </div>
                 <button onclick="nextQuestion()" class="btn hide" id="next-btn">Next Question</button>
-                <div id="explanation"></div>
+                <div id="explanation" class = "intro-text "></div>
             </div>
         </main>
         <!-- Kiki Image -->

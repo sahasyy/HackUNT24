@@ -167,12 +167,11 @@ function endGame() {
         <br>
         <br>
         <button onclick="startVoiceAnalyzer()" class="btn">Voice Analyzer</button>
-        <a type = "button" href = "http://127.0.0.1:5000" class = "btn">Go to our voice analyzer!</a>
     `;
     explanation.classList.remove('hide');
 }
 
 function startVoiceAnalyzer() {
     // Redirect to a voice analyzer page or start voice analysis functionality
-    window.location.href = "voiceanalyzer.html";
+    window.location.href = "whisper.html";
 }
