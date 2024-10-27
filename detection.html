@@ -1,70 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SecureCheck - Kahoot Game</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="detection.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="detection.css" />
+  </head>
+  <body>
     <div class="container">
-        <!--nav bar-->
-        <header>
-            <img src="noface.png" alt="SecureCheck Logo" class="logo">
-            <button id="spookify-btn" class="spookify-btn">Spookify</button>
-        </header>
-        <main>
-            <div class="intro-text">
-                <h1>Welcome to "AI or Not?"</h1>
-            </div>
-            <div class="border border-gray-300 rounded-lg p-4 mb-4 email-container">
-                <div class="email-container" style="position: relative; width: 800px; height: 600px;">
-                    <form id="email-form">
-                      <!-- Enter email label -->
-                      <div style="position: absolute; top: -10%; left: 0px; font-size: 18px;"
-                      class = "intro-text">
-                        Enter the email you're suspicious of!
-                      </div>
-                      
-                      <!-- Email header textarea -->
-                      <textarea 
-                        id="email-header" 
-                        style="position: absolute; top: 60px; left: 0px; width: 500px; height: 100px;"
-                        placeholder="Paste the email header here!"
-                      ></textarea>
-                  
-                      <!-- AI Response section -->
-                      <div style="position: absolute; top: 0px; left: 540px;">
-                        <div style="font-size: 18px;"
-                        class = "intro-text">AI Response:</div>
-                        <textarea 
-                          id="ai-response" 
-                          style="width: 500px; height: 100px; margin-top: 10px;"
-                          readonly
-                          placeholder="AI will respond here!"
-                        ></textarea>
-                      </div>
-                  
-                      <!-- Email body textarea - fixed position regardless of AI response size -->
-                      <textarea 
-                        id="email-body" 
-                        style="position: absolute; top: 180px; left: 0px; width: 500px; height: 300px;"
-                        placeholder="Paste the email body content here!"
-                      ></textarea>
-                  
-                      <!-- Submit button -->
-                      <button type="submit" class="btn" style="position: absolute; top: 500px; left: 20px;">
-                        Analyze Email
-                      </button>
-                    </form>
-                  </div>
-                </form>
-            </div>
-        </main>
+      <!--nav bar-->
+      <header>
+        <img src="noface.png" alt="SecureCheck Logo" class="logo" />
+        <button id="spookify-btn" class="spookify-btn">Spookify</button>
+      </header>
+      <main>
+        <div class="intro-text">
+          <h1>Welcome to "AI or Not?"</h1>
+        </div>
+        <div class="border border-gray-300 rounded-lg p-4 mb-4 email-container">
+          <div
+            class="email-container"
+            style="position: relative; width: 800px; height: 600px"
+          >
+            <form id="email-form">
+              <!-- Enter email label -->
+              <div
+                style="
+                  position: absolute;
+                  top: -10%;
+                  left: 0px;
+                  font-size: 22px;
+                  display: flex;
+                "
+                class="intro-text"
+              >
+                Enter the email you're
+                <div style="margin-inline: 5px; text-decoration: underline">
+                  suspicious
+                </div>
+                of!
+              </div>
+
+              <!-- Email header textarea -->
+              <textarea
+                id="email-header"
+                style="
+                  position: absolute;
+                  top: 60px;
+                  left: 0px;
+                  width: 500px;
+                  height: 100px;
+                "
+                placeholder="Paste the email header here!"
+              ></textarea>
+
+              <!-- AI Response section -->
+              <div style="position: absolute; top: 0px; left: 540px">
+                <div style="font-size: 18px" class="intro-text">
+                  AI Response:
+                </div>
+                <textarea
+                  id="ai-response"
+                  style="width: 500px; height: 100px; margin-top: 10px"
+                  readonly
+                  placeholder="AI will respond here!"
+                ></textarea>
+                <div>
+                  <h3 id="human-score">Human Score:</h3>
+                  <h3 id="fake-score">Proabability AI Generated:</h3>
+                </div>
+              </div>
+
+              <!-- Email body textarea - fixed position regardless of AI response size -->
+              <textarea
+                id="email-body"
+                style="
+                  position: absolute;
+                  top: 180px;
+                  left: 0px;
+                  width: 500px;
+                  height: 300px;
+                "
+                placeholder="Paste the email body content here!"
+              ></textarea>
+
+              <!-- Submit button -->
+              <button
+                type="submit"
+                id="submit_button"
+                class="btn"
+                style="position: absolute; top: 500px; left: 20px"
+              >
+                Analyze Email
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
     </div>
-    <script src="detection.js"></script>
-</body>
+    <script>
+      document
+        .getElementById("email-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevents the default form submission
+
+          const emailHeader = document.getElementById("email-header").value;
+          const emailBody = document.getElementById("email-body").value;
+
+          const myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json");
+
+          const raw = JSON.stringify({
+            "input-text": emailHeader + "\n" + emailBody, // Combine header and body
+          });
+
+          const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+          };
+
+          fetch("http://localhost:4080/detect-ai", requestOptions)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((result) => {
+              console.log(result);
+              document.getElementById("ai-response").value = result.gpt_detect; // Display AI response
+              document.getElementById("human-score").textContent +=
+                " " + result.humanScore;
+              document.getElementById("fake-score").textContent +=
+                " " + result.howFake;
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
+  </body>
 </html>
