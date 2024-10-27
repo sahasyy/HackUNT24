@@ -9,23 +9,26 @@
 </head>
 <<<<<<< Updated upstream
 <body>
-=======
-<body>>
-    </nav>
->>>>>>> Stashed changes
-    <div class="quiz-container">
-        <h1>Goldman Sachs Fraud Detection Quiz</h1>
-        <img id = "question-img">
-        <div id = "explanation" class = "hide">explanation!</div>
-        <div id="buttons" class="btn-container">
-            <button id = "trick" class = "btn hide">Trick!</button>
-            <button id = "treat" class = "btn hide">Treat!</button>
-        </div>
-
-        <div class="controls">
-            <button id="start-btn" class="btn">Start Quiz</button>
-            <button id="next-btn" class="btn hide">Next</button>
-        </div>
+    <div class="container spooky-mode">
+        <header>
+            <img src="noface.png" alt="SecureCheck Logo" class="logo">
+            <button id="spookify-btn" class="spookify-btn">Spookify</button>
+        </header>
+        <main>
+            <div class="content">
+                <div class="welcome-text">
+                    <h1>Hello, Welcome to SecureCheck</h1>
+                    <p>Sign in to get started</p>
+                </div>
+                <div class="sign-in-box">
+                    <form id="sign-in-form" action="kahoot.html">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
