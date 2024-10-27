@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureCheck - Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="myown.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="noface.png" alt="SecureCheck Logo" class="logo" />
+        <button id="spookify-btn" class="spookify-btn">Spookify</button>
+      </header>
+      <main>
+        <div class="content">
+          <div class="grad-container"><h1>Is this call a scam or not?</h1></div>
+
+          <p class="subtext">Upload and find out!</p>
+          <div class="unhide">
+            <p id="transcript"></p>
+          </div>
+          <div class="formContainer">
+            <form class="form" id="myForm">
+              <input type="file" id="inpFile" />
+              <button type="submit" id="theButton">Upload File</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="resultDisplay"></div>
+      </main>
+    </div>
+
+    <script src="./request.js"></script>
+  </body>
+</html>
