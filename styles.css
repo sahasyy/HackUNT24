@@ -80,6 +80,68 @@ header {
 .welcome-text p {
     font-size: 34px;
     margin-top: 10px;
+<<<<<<< Updated upstream
+}
+
+/* Sign-In Box */
+.sign-in-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    display: inline-block;
+    margin-right: 30px; /* Adds margin to ensure it doesn't touch the right side */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.submit-btn {
+    background-color: rgb(122, 150, 193);
+    color: white;
+    padding: 15px;
+    padding-right: 30px; /* Added extra padding to the right */
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+/* Spooky Mode Styles */
+.spooky-mode body {
+    background-color: black;
+    color: white;
+}
+
+.spooky-mode .sign-in-box {
+    background-color: #2c003e;
+}
+
+.spooky-mode .submit-btn {
+    background-color: #640032;
+}
+
+.spooky-mode .spookify-btn {
+    background-color: #640032;
+    color: #ff006e;
+=======
+>>>>>>> Stashed changes
 }
 
 /* Sign-In Box */
