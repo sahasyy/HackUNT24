@@ -73,18 +73,18 @@ header {
 
 /* Main Content Layout */
 .content {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 30px;
-    padding-top: 20%;
-    z-index: 1;
-    position: relative;
+    padding: 200px 30px;
+    box-sizing: border-box;
 }
 
 /* Welcome Text */
 .welcome-text {
     max-width: 50%;
+    padding-left: 30px;
     color: #fff;
 }
 
@@ -159,6 +159,16 @@ input[type="text"], input[type="password"] {
 .spooky-mode body {
     background-color: black;
     color: white;
+}
+
+/* jiji Image */
+.jiji {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 250px;
+    height: auto;
+    z-index: 1;
 }
 
 .spooky-mode .sign-in-box {
