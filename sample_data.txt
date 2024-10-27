@@ -1,0 +1,64 @@
+Whisper -> in recording folder
+
+
+Emails:
+
+// Test One
+Subject: Important: Action Required for Your Goldman Sachs Account
+
+From: support@goldman-sachsu.com
+To: john@goldman-sachs.com
+
+Dear John,
+
+We hope this email finds you well. We are reaching out to inform you of a recent security update concerning your Goldman Sachs account. To ensure the safety of your information, we require you to confirm your account details.
+
+Please take a moment to review and update your account information by clicking the link below:
+
+Update Your Account
+
+For security purposes, your access will be limited if this action is not completed within the next 24 hours. We apologize for any inconvenience this may cause and appreciate your prompt attention to this matter.
+
+If you have any questions, please contact our Support Team at support@goldman-sachsu.com.
+
+Thank you for your cooperation.
+Sincerely,
+Goldman Sachs Support Team
+
+This email contains confidential information and is intended only for the recipient. Please do not share this message.
+--------------------
+// Test Two
+Subject: Important Update: Enhancements to Your Goldman Sachs Account Security
+
+From: support@goldmansachs.com
+To: john@goldmansachs.com
+
+Dear John,
+
+We are committed to ensuring the security of your information and continually work to improve the safety of your Goldman Sachs account. As part of our ongoing security enhancements, we are implementing a few updates to our account authentication process.
+
+No action is required on your part at this time. These changes will be automatically applied, and you will receive a notification once the update is complete.
+
+If you would like more information about these updates, please visit our official website: goldmansachs.com/security-updates.
+
+Should you have any questions or concerns, please feel free to reach out to our Support Team at support@goldmansachs.com, or call us at 1-800-555-1234.
+
+Thank you for being a valued customer.
+
+Sincerely,
+Goldman Sachs Support Team
+
+Please note: This email is intended only for the recipient and may contain confidential information. If you are not the intended recipient, please delete this email and notify us immediately.
+
+// Test 3
+From: jenny.matrigano@goldman-sachs.com
+To: john.david@goldman-sachs.com
+Subject: Meeting Reminder
+
+Hey John,
+Just a friendly reminder, your 1 on 1 is coming up this Friday at 3 pm. The link should already be on your calendar.
+
+Or you can use this one http://goldman-sachsu.com/ul/meeting?true=john?matrigano
+
+Thanks,
+Jenny

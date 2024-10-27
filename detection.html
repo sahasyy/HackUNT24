@@ -137,10 +137,10 @@
             .then((result) => {
               console.log(result);
               document.getElementById("ai-response").value = result.gpt_detect; // Display AI response
-              document.getElementById("human-score").textContent +=
-                " " + result.humanScore;
-              document.getElementById("fake-score").textContent +=
-                " " + result.howFake;
+              document.getElementById("human-score").textContent =
+                "Human Score: " + result.humanScore;
+              document.getElementById("fake-score").textContent =
+                "Probability AI Generated: " + result.howFake;
             })
             .catch((error) => console.error("Error:", error));
         });

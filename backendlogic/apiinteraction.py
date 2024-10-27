@@ -29,11 +29,8 @@ def hitApi(sample_text:str):
             howFake = obj["howFake"] = response['data']['fakePercentage']
             humanScore = int(humanScore)
             howFake = int(howFake)
-            if(humanScore < 15 and howFake > 85):
-                 return obj
-            else:
-                 obj["gpt_detect"] = detectScam_GPT(sample_text)
-                 return obj
+            obj["gpt_detect"] = detectScam_GPT(sample_text)
+            return obj
                  
             
         elif(response['code'] == 422):
