@@ -9,9 +9,6 @@ project_id = os.getenv("PROJECT_ID")
 
 client = OpenAI()
 
-
-
-
 def detectScamCall(filePath):
 
 

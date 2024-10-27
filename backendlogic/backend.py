@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from flask_cors import CORS
 from apiinteraction import detect_AI
 from gpt_text import detectScam_WHISPER
@@ -78,3 +78,12 @@ def clear_transcript():
     return "", 200
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=4080)
+
+@app.route("/go-to-quiz", methods = ["POST"])
+def go_to_quiz():
+    return redirect("http://localhost:8080/index.html")
+
+#is_spooky = request.args.get('spooky') == 'true
+#/{NORMAL ROUTE}?spooky=true
+#normal route
+#spooky route
