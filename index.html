@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraud Detection Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
+<<<<<<< Updated upstream
 <body>
-    <div class="quiz-container">
-        <h1>Goldman Sachs Fraud Detection Quiz</h1>
-        <div id="question-container" class="hide">
-            <div id="question">Question Text</div>
-            <div id="answer-buttons" class="btn-container"></div>
-        </div>
-        <div class="controls">
-            <button id="start-btn" class="btn">Start Quiz</button>
-            <button id="next-btn" class="btn hide">Next</button>
-        </div>
-        <div id="result" class="hide">Your Score: <span id="score">0</span>/10</div>
+    <div class="container spooky-mode">
+        <header>
+            <img src="noface.png" alt="SecureCheck Logo" class="logo">
+            <button id="spookify-btn" class="spookify-btn">Spookify</button>
+        </header>
+        <main>
+            <div class="content">
+                <div class="welcome-text">
+                    <h1>Hello, Welcome to SecureCheck</h1>
+                    <p>Sign in to get started</p>
+                </div>
+                <div class="sign-in-box">
+                    <form id="sign-in-form" action="kahoot.html">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>

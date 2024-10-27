@@ -1,0 +1,175 @@
+/* Base Styles */
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: rgb(122, 150, 193);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Spookify Button */
+.spookify-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.spookify-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Intro Text */
+.intro-text, label {
+    text-align: center;
+    color: #fff;
+}
+.intro-text{
+    margin-top: 80px; /* Positioned right under the header */
+}
+label{
+    margin-bottom: 25px;
+}
+
+.intro-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.intro-text p {
+    font-size: 24px;
+}
+
+/* Game Container */
+.email-container {
+    text-align: center;
+    margin-top: 30px;
+}
+.game-image{
+    max-height:80%;
+}
+
+/* Game Image */
+.game-image img {
+    max-width: 80%; /* Restricts the size for a better appearance */
+    max-height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Game Buttons */
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: rgb(122, 150, 193);
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+/* Spooky Mode Styles */
+.spooky-mode body {
+    background-color: black;
+    color: white;
+}
+
+.spooky-mode .intro-text {
+    color: #ff006e;
+}
+
+.spooky-mode .game-container {
+    color: #ff006e;
+}
+
+.spooky-mode .btn {
+    background-color: #2c003e;
+    color: #ff006e;
+}
+
+.spooky-mode .spookify-btn {
+    background-color: #640032;
+    color: #ff006e;
+}
+
+.spooky-mode .game-image img {
+    border-color: #640032;
+}
+
+li{
+    font-size: 25px;
+}
+
+.hide {
+    display: none !important;
+}
+
+#next-btn:hover {
+    background-color: black;
+}
+
+.flex-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 1rem; /* Space below the container */
+}
+
+.flex-container textarea {
+    width: 48%; /* Set width for the left textarea */
+}
+
+.ai-response {
+    width: 48%; /* Set width for the AI response textarea */
+}
+
+.flex-row-container {
+    display:flex;
+    flex-direction: row;
+}
+.flex-col-container{
+    display:flex;
+    flex-direction: col;
+}

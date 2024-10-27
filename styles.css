@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -9,8 +8,9 @@ body {
 }
 
 .quiz-container {
-    width: 80%;
-    max-width: 600px;
+    position: relative;
+    width: 100%;
+    height: 60%;
     text-align: center;
     border: 2px solid #333;
     border-radius: 10px;
@@ -37,7 +37,21 @@ body {
 
 .btn-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width:100%;
+}
+#question-img{
+    max-height: 75%;
+}
+#explanation{
+    position: absolute;
+    width:100%;
+}
+#trick{
+    width:50%;
+}
+#treat{
+    width:50%;
 }
 
 .controls {
