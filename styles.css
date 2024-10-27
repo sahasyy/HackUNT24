@@ -80,7 +80,6 @@ header {
 .welcome-text p {
     font-size: 34px;
     margin-top: 10px;
-<<<<<<< Updated upstream
 }
 
 /* Sign-In Box */
@@ -140,8 +139,6 @@ input[type="text"], input[type="password"] {
 .spooky-mode .spookify-btn {
     background-color: #640032;
     color: #ff006e;
-=======
->>>>>>> Stashed changes
 }
 
 /* Sign-In Box */
