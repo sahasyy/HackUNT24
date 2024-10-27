@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="myown.css" />
+    <style></style>
   </head>
   <body>
     <div class="container">
@@ -23,14 +24,21 @@
         <div class="content">
           <div class="grad-container"><h1>Is this call a scam or not?</h1></div>
 
-          <p class="subtext">Upload and find out!</p>
+          <p id="subtext">Upload and find out!</p>
+
           <div class="unhide">
+            <p id="message"></p>
             <p id="transcript"></p>
           </div>
           <div class="formContainer">
             <form class="form" id="myForm">
               <input type="file" id="inpFile" />
               <button type="submit" id="theButton">Upload File</button>
+              <div class="progress-container" id="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-bar-fill"></div>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -39,6 +47,68 @@
       </main>
     </div>
 
-    <script src="./request.js"></script>
+    <script>
+      const form = document.getElementById("myForm");
+      const fileInput = document.getElementById("inpFile");
+      const message = document.getElementById("message");
+      const progressContainer = document.getElementById("progress-container");
+      const progressBarFill = document.querySelector(".progress-bar-fill");
+      const resultDisplay = document.getElementById("resultDisplay");
+      const formContainer = document.querySelector(".formContainer");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const file = fileInput.files[0];
+        if (file) {
+          // Show progress bar and start progress
+          progressContainer.style.display = "block";
+          progressBarFill.style.width = "0%";
+          message.textContent = "";
+
+          const formData = new FormData();
+          formData.append("file", file);
+
+          // Start progress animation
+          let progress = 0;
+          const progressInterval = setInterval(() => {
+            if (progress < 90) {
+              progress += 5;
+              progressBarFill.style.width = progress + "%";
+            }
+          }, 100);
+
+          fetch("http://localhost:4080/detect-voice", {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accepts: "multipart/form-data",
+            },
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              // Stop progress animation
+              clearInterval(progressInterval);
+              progressBarFill.style.width = "100%";
+
+              // Hide form and show result after a brief delay
+              setTimeout(() => {
+                formContainer.style.display = "none";
+                document.getElementById("subtext").textContent = data;
+                resultDisplay.style.display = "block";
+              }, 500);
+            })
+            .catch((error) => {
+              // Stop progress animation
+              clearInterval(progressInterval);
+              progressContainer.style.display = "none";
+
+              message.textContent = "Error: " + error.message;
+              console.error(error);
+            });
+        } else {
+          message.textContent = "please select file to upload";
+        }
+      });
+    </script>
   </body>
 </html>

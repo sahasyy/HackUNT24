@@ -48,16 +48,16 @@ def detect_audio_scam():
 
         # Call your processing methods
         text = detectScamCall(file_path)
-        print("Transcription complete:", text)
+
         result = detectScam_WHISPER(text)
-        print("Analysis complete:", result)
+
         
         # Clean up
         os.remove(file_path)
-        print("RESULT")
-        print(result)
+
+
         super_text = result
-        print("SUPER TEXT")
+
         print(super_text)
         return result, 200, response_headers
         
@@ -73,7 +73,7 @@ def return_transcript():
 @app.route("/clear-transcript", methods=["GET"])
 def clear_transcript():
     global super_text
-    print("CLEARING SUPER TEXT")
+
     super_text = ""
     return "", 200
 if __name__ == "__main__":

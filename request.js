@@ -20,7 +20,7 @@ myForm.addEventListener("submit", async (e) => {
       method: "POST",
       body: formData,
       headers: {
-        Accept: "text/plain", // Expect a text response
+        Accepts: "multipart/form-data", // Expect a text response
       },
     });
 

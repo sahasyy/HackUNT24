@@ -1,58 +1,68 @@
+/* Container and general layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+/* Header styles */
 h1 {
   font-size: 5rem;
   margin: 0;
   color: black;
+  text-align: center;
+  line-height: 1.2;
 }
-.content {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: start;
-}
+
 .subtext {
   margin: 0;
   color: #3a3a3a;
   font-size: 20px;
+  text-align: center;
 }
-#uploadForm {
-  padding: 10px;
+
+/* Message display */
+#message {
+  min-height: 24px;
+  margin: 0.5rem 0;
+  color: #ff0000;
+  font-size: 1rem;
 }
-.unhide {
-  display: none;
-}
-#transcript {
-  font-size: large;
-}
+
+/* Form container */
 .formContainer {
-  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-#theButton {
-  width: 400px;
-  padding: 1rem;
-  background-color: rgb(26, 26, 55);
-  border: none;
-  margin-top: 1rem;
-  color: white;
-  font-weight: bolder;
-  font-size: 1rem;
-  border-radius: 50px;
-  transition: background-color 0.3s ease; /* Add smooth 
-  transition */
-  cursor: pointer; /* Add pointer cursor for better UX */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-#theButton:hover {
-  background-color: rgb(29, 29, 122);
-}
+/* File input styling */
 #inpFile {
   margin-top: 2rem;
-}
-#inpFile {
-  margin-top: 2rem;
-
   display: block;
-  width: 500px;
-
+  width: 100%;
+  max-width: 500px;
   padding: 0.8rem;
   border: 2px solid rgb(26, 26, 55);
   border-radius: 25px;
@@ -64,6 +74,59 @@ h1 {
   cursor: pointer;
 }
 
+/* Progress bar container */
+.progress-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+  display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+/* Submit button */
+#theButton {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  background-color: rgb(26, 26, 55);
+  border: none;
+  margin-top: 1rem;
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#theButton:hover {
+  background-color: rgb(29, 29, 122);
+}
+
+/* Result display */
+#resultDisplay {
+  width: 100%;
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  display: none;
+}
+
+/* File input button styling */
 #inpFile::-webkit-file-upload-button {
   background-color: rgb(26, 26, 55);
   color: white;
@@ -81,12 +144,6 @@ h1 {
   background-color: rgb(29, 29, 122);
 }
 
-#inpFile:hover {
-  border-color: rgb(29, 29, 122);
-  box-shadow: 0 2px 8px rgba(26, 26, 55, 0.1);
-}
-
-/* For Firefox */
 #inpFile::file-selector-button {
   background-color: rgb(26, 26, 55);
   color: white;
@@ -103,24 +160,8 @@ h1 {
 #inpFile::file-selector-button:hover {
   background-color: rgb(29, 29, 122);
 }
-/* GRADIENT TEXT spooky */
-/* h1 {
-  background: linear-gradient(
-    to right,
-    rgb(164, 67, 59),
-    #2f1a6f,
-    #000000,
-    #2f1a6f,
-    rgb(164, 67, 59)
-  );
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-gradient 6s linear infinite;
-} */
-/* @keyframes animate-gradient {
-  to {
-    background-position: 200%;
-  }
-} */
+
+#inpFile:hover {
+  border-color: rgb(29, 29, 122);
+  box-shadow: 0 2px 8px rgba(26, 26, 55, 0.1);
+}
