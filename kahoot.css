@@ -6,7 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -75,11 +74,14 @@ header {
     text-align: center;
     margin-top: 30px;
 }
+.game-image{
+    max-height:80%;
+}
 
 /* Game Image */
 .game-image img {
     max-width: 80%; /* Restricts the size for a better appearance */
-    height: auto;
+    max-height: 600px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
@@ -134,4 +136,16 @@ header {
 
 .spooky-mode .game-image img {
     border-color: #640032;
+}
+
+li{
+    font-size: 25px;
+}
+
+.hide {
+    display: none !important;
+}
+
+#next-btn:hover {
+    background-color: black;
 }
