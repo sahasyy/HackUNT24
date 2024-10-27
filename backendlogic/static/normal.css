@@ -1,0 +1,162 @@
+/* Base Styles */
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: rgb(122, 150, 193);
+    color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Spookify Button */
+.spookify-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.spookify-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Main Content Layout */
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px 30px;
+    box-sizing: border-box;
+}
+
+/* Welcome Text */
+.welcome-text {
+    max-width: 50%;
+    padding-left: 30px;
+    color: #fff;
+}
+
+.welcome-text h1 {
+    font-size: 70px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.welcome-text p {
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+/* Sign-In Box */
+.sign-in-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    display: inline-block;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: rgb(122, 150, 193);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Spooky Mode Styles */
+.spooky-mode body {
+    background-color: black;
+    color: white;
+}
+
+.spooky-mode .sign-in-box {
+    background-color: #2c003e;
+}
+
+.spooky-mode .submit-btn {
+    background-color: #640032;
+}
+
+.spooky-mode .spookify-btn {
+    background-color: #640032;
+    color: #ff006e;
+}

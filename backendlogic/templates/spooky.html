@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureCheck - Kahoot Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'spooky.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../../noface.png" alt="SecureCheck Logo" class="logo">
+            <a href = "{{ url_for('normal') }}" id="spookify-btn" class="spookify-btn button">Unspookify</a>
+        </header>
+        <main>
+            <form action="{{ url_for('go_to_quiz') }}" method="post">
+                <button type="submit">Go to Quiz</button>
+            </form>
+        </main>
+        <!-- Kiki Image make pos bottom right-->
+        <img src="../../kiki.png" alt="Kiki" class="kiki">
+    </div>
+</body>
+</html>
