@@ -53,10 +53,15 @@ header {
 }
 
 /* Intro Text */
-.intro-text {
+.intro-text, label {
     text-align: center;
-    margin-top: 80px; /* Positioned right under the header */
     color: #fff;
+}
+.intro-text{
+    margin-top: 80px; /* Positioned right under the header */
+}
+label{
+    margin-bottom: 25px;
 }
 
 .intro-text h1 {
@@ -150,9 +155,26 @@ li{
     background-color: black;
 }
 
-#email-header{
-    width:90%;
+.flex-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 1rem; /* Space below the container */
 }
-#email-body{
-    width:90%;
+
+.flex-container textarea {
+    width: 48%; /* Set width for the left textarea */
+}
+
+.ai-response {
+    width: 48%; /* Set width for the AI response textarea */
+}
+
+.flex-row-container {
+    display:flex;
+    flex-direction: row;
+}
+.flex-col-container{
+    display:flex;
+    flex-direction: col;
 }

@@ -19,35 +19,48 @@
         <main>
             <div class="intro-text">
                 <h1>Welcome to "AI or Not?"</h1>
-                <p>Enter the email you're suspicious of!</p>
             </div>
             <div class="border border-gray-300 rounded-lg p-4 mb-4 email-container">
-                <form>
-                    <label for="email-header" class="block text-lg font-medium mb-2"></label>
-                    <textarea 
+                <div class="email-container" style="position: relative; width: 800px; height: 600px;">
+                    <form id="email-form">
+                      <!-- Enter email label -->
+                      <div style="position: absolute; top: -10%; left: 0px; font-size: 18px;"
+                      class = "intro-text">
+                        Enter the email you're suspicious of!
+                      </div>
+                      
+                      <!-- Email header textarea -->
+                      <textarea 
                         id="email-header" 
-                        name="email-header" 
-                        rows="3" 
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                        style="position: absolute; top: 60px; left: 0px; width: 500px; height: 100px;"
                         placeholder="Paste the email header here!"
-                    ></textarea>
-                    <label for="email-body" class="block text-lg font-medium mb-2"></label>
-                    <br>
-                    <textarea 
-                      id="email-body" 
-                      name="email-body" 
-                      rows="15" 
-                      class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                      placeholder="Paste the email body content here!"
-                    ></textarea>
-                    <br>
-                    <button 
-                        type="submit" 
-                        id = "submit-btn"
-                        class="btn w-full py-3 text-xl font-semibold"
-                    >
-                    Analyze Email
-                    </button>
+                      ></textarea>
+                  
+                      <!-- AI Response section -->
+                      <div style="position: absolute; top: 0px; left: 540px;">
+                        <div style="font-size: 18px;"
+                        class = "intro-text">AI Response:</div>
+                        <textarea 
+                          id="ai-response" 
+                          style="width: 500px; height: 100px; margin-top: 10px;"
+                          readonly
+                          placeholder="AI will respond here!"
+                        ></textarea>
+                      </div>
+                  
+                      <!-- Email body textarea - fixed position regardless of AI response size -->
+                      <textarea 
+                        id="email-body" 
+                        style="position: absolute; top: 180px; left: 0px; width: 500px; height: 300px;"
+                        placeholder="Paste the email body content here!"
+                      ></textarea>
+                  
+                      <!-- Submit button -->
+                      <button type="submit" class="btn" style="position: absolute; top: 500px; left: 20px;">
+                        Analyze Email
+                      </button>
+                    </form>
+                  </div>
                 </form>
             </div>
         </main>
