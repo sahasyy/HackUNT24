@@ -1,11 +1,3 @@
-
-document.getElementById('spookify-btn').addEventListener('click', () => {
-    document.body.classList.toggle('spooky-mode');
-    const container = document.querySelector('.container');
-    container.setAttribute('data-hide-before', 'true');
-
-});
-
 const questionElement = document.getElementById('message-image');
 const answerButtonsElement = document.getElementById('game-buttons');
 const trickBtn = document.getElementById('trick-btn');
