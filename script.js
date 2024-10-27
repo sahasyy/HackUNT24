@@ -1,3 +1,7 @@
+document.getElementById('spookify-btn').addEventListener('click', () => {
+    document.body.classList.toggle('spooky-mode');
+});
+
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionElement = document.getElementById('question-img');
