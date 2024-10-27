@@ -159,6 +159,9 @@ function endGame() {
         <h2>Game Over!</h2>
         <p>Your score: ${score} out of ${questions.length}</p>
         <button onclick="startGame()" class="btn">Play Again</button>
+        <br>
+        <br>
+        <a type = "button" href = "http://127.0.0.1:5000" class = "btn">Go to our voice analyzer!</a>
     `;
     explanation.classList.remove('hide');
 }

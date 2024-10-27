@@ -169,3 +169,7 @@ body, .container {
 .hidden{
     opacity: 0;
 }
+
+a:link {
+    text-decoration: none;
+}

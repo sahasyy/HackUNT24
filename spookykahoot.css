@@ -185,3 +185,7 @@ li {
 body, .container {
     background-attachment: fixed;
 }
+
+a:link {
+    text-decoration: none;
+}
