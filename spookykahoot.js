@@ -147,6 +147,11 @@ function nextQuestion() {
             currentQuestionIndex++;
             setNextQuestion();
         }, 60);
+    } else if (currentQuestionIndex === questionsInOrder.length - 1) {
+        // If it's the last question, change the next button text to "Get Results"
+        nextButton.textContent = "Voice Analysis";
+        currentQuestionIndex++;
+        setNextQuestion();
     } else {
         // If no special image is needed, proceed to the next question directly
         currentQuestionIndex++;
@@ -163,15 +168,29 @@ function endGame() {
     explanation.innerHTML = `
         <h2>Game Over!</h2>
         <p>Your score: ${score} out of ${questionsInOrder.length}</p>
-        <button onclick="startGame()" class="btn">Play Again</button>
-        <br>
-        <br>
-        <button onclick="startVoiceAnalyzer()" class="btn">Voice Analyzer</button>
+        <button onclick="showFinalImage()" class="btn">Get Results</button>
     `;
     explanation.classList.remove('hide');
 }
 
-function startVoiceAnalyzer() {
-    // Redirect to a voice analyzer page or start voice analysis functionality
-    window.location.href = "whisper.html";
+function showFinalImage() {
+    // Show output1.gif for 5 seconds before redirecting to the results page
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundImage = "url('scary.gif')";
+    overlay.style.backgroundSize = 'cover';
+    overlay.style.backgroundPosition = 'center';
+    overlay.style.zIndex = '1000';
+    
+    document.body.appendChild(overlay);
+    
+    // Wait for 5 seconds, then redirect to the results page
+    setTimeout(() => {
+        document.body.removeChild(overlay);
+        window.location.href = "results.html"; // Change to the actual results page URL
+    }, 5000);
 }
