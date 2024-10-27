@@ -1,6 +1,12 @@
 /* Base Styles */
+@font-face {
+    font-family: 'shadowed-germanica'; /* Choose a name for your font */
+    src: url('fonts/Shadow_font') format('truetype'); /* Path to your TTF file */
+    font-weight: lighter; /* Specify the weight of the font */
+    font-style: normal; /* Specify the style of the font (normal, italic, etc.) */
+}
 body {
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'MS UI Gothic';
     background-color: rgb(122, 150, 193);
     color: black;
     display: flex;
