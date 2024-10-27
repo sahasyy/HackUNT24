@@ -6,7 +6,7 @@
     font-style: normal; /* Specify the style of the font (normal, italic, etc.) */
 }
 body {
-    font-family: 'MS UI Gothic';
+    font-family: 'Red Hat Display', sans-serif;
     background-color: rgb(122, 150, 193);
     color: black;
     display: flex;
@@ -15,6 +15,8 @@ body {
     margin: 0;
     padding: 0;
     background: url('spirited-away-3.jpeg') no-repeat center center;
+    background-size: cover; /* 100% width and height of the container */
+    height:100vh;
 }
 
 /* Container */
@@ -22,6 +24,7 @@ body {
     width: 100%;
     position: relative;
     background-size: cover; /* Ensures the background covers the entire container */
+    height: 100vh;
 }
 
 /* Gray wash overlay */
